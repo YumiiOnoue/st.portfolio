@@ -130,4 +130,6 @@ details {
 .block-container {
     padding-top: 0rem;
 }
-
+header {
+    visibility: hidden;
+}
