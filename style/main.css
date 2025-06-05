@@ -1,0 +1,133 @@
+
+/* Fundo da página com tom pastel */
+[data-testid="stAppViewContainer"] {
+    background-color: #1f2a40;
+    color: #ffffff;
+    font-family: 'Helvetica Neue', sans-serif;
+}
+/* Cor da barra lateral */
+section[data-testid="stSidebar"] {
+    background-color: #2e3c54; 
+    border-right: 1px solid #2e3c54;
+    padding: 10px;
+}
+
+/* Títulos */
+h1, h2, h3, h4, h5, h6 {
+    color: #4fd1c5 !important;
+    margin-bottom: 0.5rem;
+}
+
+/* Separadores */
+hr {
+    border: none;
+    height: 4px;
+    background-color: #ffffff;
+    margin: 20px 0;
+}
+/* Parágrafos e links */
+p {
+    font-size: 16px;
+    color: #ffffff;
+    margin-bottom: 0.3rem;
+    line-height: 1.2;
+}
+/* Links */
+a {
+    color: #4fd1c5 !important;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+/* Estiliza texto em negrito (Markdown: **texto**) */
+strong, b {
+    color: #4fd1c5; 
+}
+/* Cards e boxes */
+.projeto-card {
+    background-color: #2e3c54;
+    border: 1px solid #4fd1c5;
+    border-radius: 12px;
+}
+/* Cor do botão */
+div.stButton > button {
+    background-color: #4fd1c5;
+    color: white;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 10px;
+    font-size: 1rem;
+}
+/* Cor ao passar o mouse */
+div.stButton > button:hover {
+    background-color: #38b2ac;
+    color: white;
+}
+
+/* Cor da linha do slider (ativa) */
+.stSlider > div[data-baseweb="slider"] > div:first-child {
+    background: #1f2a40;
+}
+
+    /* Cor da bolinha (handle) */
+.stSlider span[data-baseweb="slider"] {
+    background-color: #f0f0f0;
+    border-color: #f0f0f0;
+}
+
+/* === TABS (ABAS) === */
+/* Aba normal */
+[role="tab"] {
+    background-color: #2e3c54;
+    color: #c084fc;
+    border: none;
+    border-radius: 0.5rem 0.5rem 0 0;
+    padding: 0.5rem 1rem;
+    margin-right: 4px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Aba ativa */
+[role="tab"][aria-selected="true"] {
+    background-color: #c084fc !important;
+    color: white !important;
+    font-weight: bold;
+}
+
+/* Aba ao passar o mouse */
+[role="tab"]:hover {
+    background-color: #3b4252;
+}
+/* Estilo para o header do expander */
+details[open] > summary {
+    background-color: 	#c084fc;
+    color: 	#c084fc;
+    font-size: 12px;
+    padding: 6px;
+    border-radius: 5px;
+}
+/* Aplica cor de fundo e texto no cabeçalho (minimizado e aberto) */
+details > summary {
+    background-color: #c084fc; /* Laranja chamativo */
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* Borda do container expander */
+details {
+    border: 2px solid 	#c084fc;
+    border-radius: 8px;
+    padding: 4px;
+    margin-bottom: 10px;
+}
+/* Remove o padding superior padrão do Streamlit */
+.block-container {
+    padding-top: 0rem;
+}
+
