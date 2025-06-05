@@ -38,7 +38,8 @@ def pagina_inicio():
     st.title("Bem vindo(a) ao meu portfólio!")
     col1, col2 = st.columns(2, gap="small")
     with col1:
-        st.image("images/perfil_erica.jpeg", width=200)
+        url = "https://i.postimg.cc/Rhj9Cg5Y/perfil-erica.jpg"
+        st.image(url, width=200)
         st.markdown("📄[Visualizar Currículo](https://drive.google.com/file/d/11WRTjxHsgX6m_YtW0NkLyb8B-U3XFrrE/view?usp=sharing)", unsafe_allow_html=True)
 
     with col2:
