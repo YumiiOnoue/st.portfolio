@@ -111,7 +111,7 @@ def pagina_inicio():
             st.markdown('⬅️ Para verificar os projetos completos é só clicar no menu lateral à esquerda ou no botão logo abaixo.')
             st.markdown('---------')
             
-            tab1, tab2, tab3 = st.tabs(["📊 Dashboard de Vendas", "📈 Análise Exploratória de Dados", "Modelo Preditivo"])
+            tab1, tab2, tab3 = st.tabs(["📊 Dashboard de Vendas", "🔍 Análise Exploratória de Dados", "🔮 Modelo Preditivo"])
             with tab2:
                 st.markdown('#### Análise Exploratória de um Marketplace')
                 st.markdown('''
