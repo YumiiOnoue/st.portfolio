@@ -35,8 +35,21 @@ def pagina_inicio():
     col1, col2 = st.columns(2, gap="small")
     with col1:
         url = "https://i.postimg.cc/Rhj9Cg5Y/perfil-erica.jpg"
-        st.image(url, width=200)
+        st.image(url, width=150)
         st.markdown("📄[Visualizar Currículo](https://drive.google.com/file/d/11WRTjxHsgX6m_YtW0NkLyb8B-U3XFrrE/view?usp=sharing)", unsafe_allow_html=True)
+        st.markdown("""
+            <div style="display: flex; gap: 30px; font-size: 18px; align-items: center;">
+                <a href="https://linkedin.com/in/ericayumionoue" target="_blank" style="text-decoration: none; color: inherit;">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/YumiiOnoue" target="_blank" style="text-decoration: none; color: inherit;">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="mailto:eyumiio@gmail.com" style="text-decoration: none; color: inherit;">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+            """, unsafe_allow_html=True)        
 
     with col2:
         st.markdown('''

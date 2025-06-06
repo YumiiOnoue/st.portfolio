@@ -111,7 +111,7 @@ details[open] > summary {
 }
 /* Aplica cor de fundo e texto no cabeçalho (minimizado e aberto) */
 details > summary {
-    background-color: #c084fc; /* Laranja chamativo */
+    background-color: #c084fc;
     color: white;
     font-weight: bold;
     padding: 10px;
