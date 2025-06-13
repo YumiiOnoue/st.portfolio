@@ -30,69 +30,48 @@ with open(css_path) as f:
 # ============= Layout no Streamlit ===============
 
 # --- Início ---
-def pagina_inicio():
-    st.title("Bem vindo(a) ao meu portfólio!")
-    col1, col2 = st.columns(2, gap="small")
-    with col1:
-        url = "https://i.postimg.cc/Rhj9Cg5Y/perfil-erica.jpg"
-        st.image(url, width=150)
-        st.markdown("📄[Visualizar Currículo](https://drive.google.com/file/d/11WRTjxHsgX6m_YtW0NkLyb8B-U3XFrrE/view?usp=sharing)", unsafe_allow_html=True)
-        st.markdown("""
-            <div style="display: flex; gap: 30px; font-size: 18px; align-items: center;">
-                <a href="https://linkedin.com/in/ericayumionoue" target="_blank" style="text-decoration: none; color: inherit;">
-                    <i class="fab fa-linkedin"></i>
-                </a>
-                <a href="https://github.com/YumiiOnoue" target="_blank" style="text-decoration: none; color: inherit;">
-                    <i class="fab fa-github"></i>
-                </a>
-                <a href="mailto:eyumiio@gmail.com" style="text-decoration: none; color: inherit;">
-                    <i class="fas fa-envelope"></i>
-                </a>
-            </div>
-            """, unsafe_allow_html=True)        
 
-    with col2:
-        st.markdown('''
-                    <style>
-                    .no-spacing-h3 {
-                        line-height: 1; 
-                        margin: 0;    
-                        padding: 0;
-                    }
-                    </style>
-                    <h3 class="no-spacing-h3">
-                    Eu sou Erica Yumi Onoue <br>
-                    Analista de Dados 
-                    </h3>
-                    ''',
-                    unsafe_allow_html=True)
-        st.markdown('''Estou em transição de carreira para a área de Dados, trazendo comigo mais de quatro 
-                    anos de experiência como auxiliar administrativo e uma sólida formação em Economia, 
-                    com graduação e mestrado na área. 
-                    ''')
-        
-    st.markdown('-------------') 
-    st.markdown('### Sobre mim')
-    st.markdown('''
-                Desde a faculdade, desenvolvi interesse por dados, 
-                tendo elaborado projetos de análise sobre o setor cultural e a importação de produtos farmacêuticos.
-                Durante minha trajetória profissional, tive a oportunidade de aplicar a análise de dados 
-                no dia a dia da empresa: criei dashboards por tipo de entrega, produzi relatórios de vendas 
-                e estoque, além de propor sugestões de produtos e promoções com base em dados. Essas 
-                experiências reforçaram meu desejo de migrar definitivamente para o campo da análise de dados.
-                ''')
-    st.markdown('''                
-                Atualmente, venho me dedicando ao desenvolvimento das competências essenciais para atuar 
-                como Analista de Dados, com foco em **Análise e Manipulação de Dados**, **Python**, **SQL**, **Power BI** 
-                e ferramentas de controle de versão (Git/GitHub). Estou em constante aprendizado e busco 
-                aplicar esse conhecimento em projetos práticos que resolvam problemas reais de negócio.
-                ''')
-    
+st.title("Bem vindo(a) ao meu portfólio!")
 
-# --- Habilidades ---    
-    st.markdown('---------')
-    st.markdown("### Habilidades Técnicas")
+col1, col2, col3 = st.columns([1,3,0.2], gap="small")
+with col1:
+    url = "https://i.postimg.cc/Rhj9Cg5Y/perfil-erica.jpg"
+    st.image(url, width=150)
+    st.markdown("📄[Visualizar Currículo](https://drive.google.com/file/d/11WRTjxHsgX6m_YtW0NkLyb8B-U3XFrrE/view?usp=sharing)", unsafe_allow_html=True)
     st.markdown("""
+        <div style="display: flex; gap: 30px; font-size: 18px; align-items: center;">
+            <a href="https://linkedin.com/in/ericayumionoue" target="_blank" style="text-decoration: none; color: inherit;">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/YumiiOnoue" target="_blank" style="text-decoration: none; color: inherit;">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="mailto:eyumiio@gmail.com" style="text-decoration: none; color: inherit;">
+                <i class="fas fa-envelope"></i>
+            </a>
+        </div>
+        """, unsafe_allow_html=True)        
+
+with col2:
+    st.markdown('#### Eu sou Erica Yumi Onoue')
+    st.markdown('###### Analista de dados | Python | SQL | Power BI')
+    st.markdown('''
+                Como analista de dados, minha missão é descobrir a história que os números contam. Com foco 
+                e planejamento, vou além dos relatórios para resolver problemas, entender as causas e os efeitos 
+                por trás das tendências e traduzir dados brutos em insights acionáveis. Acredito que, ao tornar os dados 
+                compreensíveis para os stakeholders, criamos estratégias mais eficazes e decisões mais embasadas.
+                Meu objetivo é ser uma parceira de confiança que contribui ativamente para o crescimento e a evolução 
+                do negócio.
+                Com formação e mestrado em Economia, apliquei essa visão na prática, analisando dados de vendas e estoque, 
+                criando dashboards por tipo de entrega e apoiando decisões estratégicas. Atualmente, aprofundo minhas 
+                competências em **Python**, **SQL** e **Power BI**, preparada para impulsionar resultados por meio da 
+                análise de dados.
+                ''')
+
+# --- Habilidades ---   
+st.markdown('---------------') 
+st.markdown("##### Habilidades:")
+st.markdown("""
     <div style='display: flex; flex-wrap: wrap; gap: 8px;'>
 
     <span style='background-color:#7e5bef; color:white; padding:6px 14px; margin:4px; border-radius:20px; font-size:14px; display:inline-block;'>Python</span>
@@ -111,81 +90,20 @@ def pagina_inicio():
     </div>
     """, unsafe_allow_html=True)
 
+# ================================================
+# ================ Projetos ======================
+# ================================================
+st.markdown('-------------') 
+st.markdown('## PROJETOS')
+st.markdown('Clique nas abas para verificar os projetos completos.')
+st.markdown('')
 
-# --- Breve descrição dos Projetos ---
-    st.markdown('-------------') 
-    with st.container():
-            st.markdown('### Projetos')
-            st.markdown('Aqui você encontrará uma breve descrição de cada projeto, ok?')
-            st.markdown('⬅️ Para verificar os projetos completos é só clicar no menu lateral à esquerda ou no botão logo abaixo.')
-            st.markdown('')
-            
-            tab1, tab2, tab3 = st.tabs(["📊 Dashboard de Vendas", "🔍 Análise Exploratória de Dados", "🔮 Modelo Preditivo"])
-            with tab2:
-                st.markdown('#### Análise Exploratória de um Marketplace')
-                st.markdown('''
-                    * **Objetivo:** objetivo identificar pontos chaves da empresa para que o CEO possa 
-                            entender melhor o negócio e conseguir tomar decisões estratégicas.
-                    * **Metodologia:** Python, manipulação de dados, visualização de dados em Streamlit e 
-                        versionamento com Github.
-                    * **Resultados:** um painel gerencial com as principais métricas da empresa.
-                            ''')
-                if st.button('Visualizar projeto completo', key='projeto_2'):
-                    projeto_2() 
-
-
-            with tab3:    
-                st.markdown('#### Modelo Preditivo dos imóveis de Boston')
-                st.markdown(''' 
-                    * **Objetivo:** fazer uma previsão dos valores dos imóveis de Boston.
-                    * **Metodologia:** foi utilizado a Regressão Linear e considerando MEDV 
-                        (valor médio de casas ocupadas) a variável dependente.                   
-                    * **Resultados:** um painel interativo, onde o usuário pode alterar as características do imóvel
-                            para verificar o preço estimado. 
-                            ''')
-                if st.button('Visualizar projeto completo', key='projeto_3'):
-                    projeto_3()
-
-            with tab1:
-                st.markdown('#### Dashboard de Vendas Cafeteria')
-                st.markdown('''
-                    * **Objetivo:** Criar um painel gerencial em Power BI para insights das vendas.
-                    * **Metodologia:** os dados foram analisados no jupyter notebook para obter cálculos estatísticos e
-                            utilizado o Power BI para gerar gráficos interativos com os principais KPIs de vendas.
-                    * **Resultado:** a empresa apresenta receita crescente nas suas três lojas. Sendo, a categoria Café e Chá os
-                            mais comercializados.
-                            ''')
-                if st.button('Visualizar projeto completo', key='projeto_1'):
-                    projeto_1() 
-
-# ---- Contato ------
-    st.markdown('-------------')
-    st.markdown('### Contato')
-    st.markdown('Obrigada por visitar meu portfólio! 💙')
-    st.markdown('''
-                Se você quiser conversar sobre oportunidades, tirar dúvidas sobre meus projetos ou apenas 
-                bater um papo sobre dados e tecnologia, estou à disposição.
-                ''')
-    st.markdown("""
-        <div style="display: flex; gap: 30px; font-size: 18px; align-items: center;">
-            <a href="https://linkedin.com/in/ericayumionoue" target="_blank" style="text-decoration: none; color: inherit;">
-                <i class="fab fa-linkedin"></i> LinkedIn
-            </a>
-            <a href="https://github.com/YumiiOnoue" target="_blank" style="text-decoration: none; color: inherit;">
-                <i class="fab fa-github"></i> GitHub
-            </a>
-            <a href="mailto:eyumiio@gmail.com" style="text-decoration: none; color: inherit;">
-                <i class="fas fa-envelope"></i> E-mail
-            </a>
-        </div>
-        """, unsafe_allow_html=True)
-    
-# ============= Função dos Projetos ===============
 # ================================================= 
 # =================  Projeto 1 ==================== 
-def projeto_1():
-    st.title('Dashboard de Vendas')
-    st.markdown('## Cafeteria ☕')
+
+tab1, tab2, tab3 = st.tabs(['Dashboard de Vendas','Análise Exploratória','Modelo preditivo'])
+with tab1:
+    st.markdown('## Dashboard de Vendas de uma Cafeteria ☕')
     st.markdown("""
     <div style='display: flex; flex-wrap: wrap; gap: 8px;'>
     
@@ -242,7 +160,9 @@ def projeto_1():
     st.markdown('### Análise Gráfica')   
     st.markdown('A análise gráfica foi realizada no Power BI. Para interagir com o dashboard de vendas é só clicar [aqui](https://app.powerbi.com/view?r=eyJrIjoiYmMwMmQyNzgtMzJjMC00ZTViLThjNzAtYWRlODFhOGE0Y2E1IiwidCI6IjJlYjE0NDQ3LTQ0YWQtNDllZi04YjhmLTA5OWEzNTlhYjZkYSJ9).')
     st.markdown('Logo abaixo você terá o dashboard de forma estático. (Em atualização)')
-
+    st.image('images/geral.jpeg')
+    st.image('images/por_loja.jpeg')
+    st.image('images/por_produto.jpeg')
     st.markdown('### Insights')
     st.markdown('''
             * Faturamento de US$698.81 mil, totalizando 214 mil vendas. 
@@ -268,12 +188,12 @@ def projeto_1():
             * Produtos como Chili Mayan, Caramel Syrup, Brazilian Organic, Chocolate Chip Biscotti e Almond Croissant 
                 apresentam baixo desempenho e precisam de maior atenção estratégica, seja para reposicionamento, ajuste de preço ou revisão da oferta.
             ''')
+    st.info("Clique nas outras abas para ver o próximo projeto!")
 
 # ================================================= 
 # =================  Projeto 2 ==================== 
-def projeto_2():
-    st.title('Análise Exploratória de Dados')
-    st.markdown('## Marketplace 🛍️')
+with tab2:
+    st.markdown('## Análise Exploratória de Dados de um Marketplace 🛍️')
     st.markdown("""
     <div style='display: flex; flex-wrap: wrap; gap: 8px;'>
     
@@ -322,15 +242,14 @@ def projeto_2():
     st.markdown('### Conclusões') 
     st.markdown('Após analisar os dados, pode-se observar que são poucos os países que utilizam a plataforma e a ' \
             'maioria dos restaurantes cadastrados estão na Índia.')
+    st.info("Clique nas outras abas para ver o próximo projeto!")
 
 # ================================================= 
 # =================  Projeto 3 ==================== 
-def projeto_3():
-    st.title('Modelo Preditivo')
-    st.markdown('## Imóveis de Boston 🏢')
+with tab3:
+    st.markdown('## Modelo Preditivo para valores de Imóveis em Boston 🏢')
     st.markdown("""
     <div style='display: flex; flex-wrap: wrap; gap: 8px;'>
-
     <span style='background-color:#7e5bef; color:white; padding:6px 14px; margin:4px; border-radius:20px; font-size:14px; display:inline-block;'>Python</span>
     <span style='background-color:#7e5bef; color:white; padding:6px 14px; margin:4px; border-radius:20px; font-size:14px; display:inline-block;'>Pandas</span>
     <span style='background-color:#7e5bef; color:white; padding:6px 14px; margin:4px; border-radius:20px; font-size:14px; display:inline-block;'>NumPy</span>
@@ -338,7 +257,6 @@ def projeto_3():
     <span style='background-color:#7e5bef; color:white; padding:6px 14px; margin:4px; border-radius:20px; font-size:14px; display:inline-block;'>Seaborn</span>
     <span style='background-color:#7e5bef; color:white; padding:6px 14px; margin:4px; border-radius:20px; font-size:14px; display:inline-block;'>Sklearn</span>            
     <span style='background-color:#7e5bef; color:white; padding:6px 14px; margin:4px; border-radius:20px; font-size:14px; display:inline-block;'>Streamlit</span>
-
     </div>
     """, unsafe_allow_html=True)    
     st.markdown('### Objetivo')
@@ -360,9 +278,9 @@ def projeto_3():
     def load_data():
         url = 'https://archive.ics.uci.edu/ml/machine-learning-databases/housing/housing.data'
         columns = [
-            'CRIM', 'ZN', 'INDUS', 'CHAS', 'NOX', 'RM', 'AGE',
-            'DIS', 'RAD', 'TAX', 'PTRATIO', 'B', 'LSTAT', 'MEDV'
-        ]
+                'CRIM', 'ZN', 'INDUS', 'CHAS', 'NOX', 'RM', 'AGE',
+                'DIS', 'RAD', 'TAX', 'PTRATIO', 'B', 'LSTAT', 'MEDV'
+            ]
         df = pd.read_csv(url, delim_whitespace=True, names=columns)
         return df
 
@@ -501,24 +419,29 @@ def projeto_3():
     st.markdown('### Conclusões') 
     st.markdown(' 🚧 Em desenvolvimento 🔧')
 
-# --- Barra Lateral ---
-st.sidebar.title('Menu')
-selection = st.sidebar.radio('Ir para:',
-                            ['**Início**',
-                            'Dashboard de Vendas',
-                            'Análise Exploratória de Dados',
-                            'Modelo Preditivo'])
-
-if selection == '**Início**':
-    pagina_inicio()
-elif selection == 'Dashboard de Vendas':
-    projeto_1()
-elif selection == 'Análise Exploratória de Dados':
-    projeto_2()
-elif selection == 'Modelo Preditivo':
-    projeto_3()
-
+# ======================================
+# ================ Contato =============
+st.markdown('-------------')
+st.markdown('### CONTATO')
+st.markdown('Obrigada por visitar meu portfólio! 💙')
+st.markdown('''
+                Se você quiser conversar sobre oportunidades, tirar dúvidas sobre meus projetos ou apenas 
+                bater um papo sobre dados e tecnologia, estou à disposição.
+                ''')
+st.markdown("""
+    <div style="display: flex; gap: 30px; font-size: 18px; align-items: center;">
+        <a href="https://linkedin.com/in/ericayumionoue" target="_blank" style="text-decoration: none; color: inherit;">
+            <i class="fab fa-linkedin"></i> LinkedIn
+        </a>
+        <a href="https://github.com/YumiiOnoue" target="_blank" style="text-decoration: none; color: inherit;">
+            <i class="fab fa-github"></i> GitHub
+        </a>
+        <a href="mailto:eyumiio@gmail.com" style="text-decoration: none; color: inherit;">
+            <i class="fas fa-envelope"></i> E-mail
+        </a>
+    </div>
+    """, unsafe_allow_html=True)
 
 # --- Rodapé ---
 st.markdown('-------------')
-st.markdown('Desenvolvido com [Streamlit](https://streamlit.io) | © 2025 Erica Yumi Onoue.')
+st.markdown(f"<div style='text-align: center;'>{'Desenvolvido com Streamlit | © 2025 Erica Yumi Onoue.'}</div>", unsafe_allow_html=True)
