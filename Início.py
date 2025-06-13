@@ -54,9 +54,9 @@ with col1:
 
 with col2:
     st.markdown('#### Eu sou Erica Yumi Onoue')
-    st.markdown('###### Analista de dados | Python | SQL | Power BI')
+    st.markdown('###### Analista de Dados | Python | SQL | Power BI')
     st.markdown('''
-                Como analista de dados, minha missão é descobrir a história que os números contam. Com foco 
+                Como Analista de Dados, minha missão é descobrir a história que os números contam. Com foco 
                 e planejamento, vou além dos relatórios para resolver problemas, entender as causas e os efeitos 
                 por trás das tendências e traduzir dados brutos em insights acionáveis. Acredito que, ao tornar os dados 
                 compreensíveis para os stakeholders, criamos estratégias mais eficazes e decisões mais embasadas.
@@ -95,7 +95,7 @@ st.markdown("""
 # ================================================
 st.markdown('-------------') 
 st.markdown('## PROJETOS')
-st.markdown('Clique nas abas para verificar os projetos completos.')
+st.markdown('Navegue pelas abas abaixo para verificar os meus projetos.')
 st.markdown('')
 
 # ================================================= 
@@ -159,7 +159,7 @@ with tab1:
 
     st.markdown('### Análise Gráfica')   
     st.markdown('A análise gráfica foi realizada no Power BI. Para interagir com o dashboard de vendas é só clicar [aqui](https://app.powerbi.com/view?r=eyJrIjoiYmMwMmQyNzgtMzJjMC00ZTViLThjNzAtYWRlODFhOGE0Y2E1IiwidCI6IjJlYjE0NDQ3LTQ0YWQtNDllZi04YjhmLTA5OWEzNTlhYjZkYSJ9).')
-    st.markdown('Logo abaixo você terá o dashboard de forma estático. (Em atualização)')
+    st.markdown('Logo abaixo, você verá o dashboard de forma estática. (Em atualização)')
     st.image('images/geral.jpeg')
     st.image('images/por_loja.jpeg')
     st.image('images/por_produto.jpeg')
@@ -205,7 +205,7 @@ with tab2:
     </div>
     """, unsafe_allow_html=True)
     st.markdown('### Objetivo')
-    st.markdown('Esse projeto teve como objetivo identificar pontos chaves da empresa ' \
+    st.markdown('Este projeto teve como objetivo identificar pontos-chave da empresa ' \
             'para que o CEO possa entender melhor o negócio e conseguir tomar as melhores decisões ' \
             'estratégicas.')
     
@@ -263,12 +263,12 @@ with tab3:
     st.markdown('O objetivo principal é criar um modelo que estime o valor de um imóvel em Boston considerando diversos atributos.')
     st.markdown('### Metodologia')    
     st.markdown('''
-                * Os dados foram coletadas pelo U.S Census Service e estão disponíveis nesse [link](https://www.cs.toronto.edu/~delve/data/boston/bostonDetail.html).
+                * Os dados foram coletados pelo U.S Census Service e estão disponíveis nesse [link](https://www.cs.toronto.edu/~delve/data/boston/bostonDetail.html).
                 * Para essa análise foram utilizados 14 atributos.
                 * Para prever os valores dos imóveis, foi utilizado a Regressão Linear e considerando MEDV (valor médio de casas 
                 ocupadas) a variável dependente.
-                * Os gráficos foram feitos com seaborn e matplotlit.
-                * Para regressão e métricas de validação foi utilizado o sklearn.
+                * Os gráficos foram feitos com Seaborn e Matplotlib.
+                * Para a regressão e as métricas de validação, foi utilizado o Scikit-learn.
                 ''')
     
     st.markdown('### Análise Exploratória dos dados')
@@ -351,7 +351,7 @@ with tab3:
         else:
             st.warning("Selecione ao menos uma variável para prosseguir.")
 
-        st.markdown('#### Valores Reais vs Valores Previsto')
+        st.markdown('#### Valores Reais vs. Valores Previstos')
         df_result = pd.DataFrame({'Real': y_test, 'Previsto': y_pred})
         # Gráfico de dispersão real x previsto
         fig, ax = plt.subplots(figsize=(6, 4))
@@ -425,8 +425,8 @@ st.markdown('-------------')
 st.markdown('### CONTATO')
 st.markdown('Obrigada por visitar meu portfólio! 💙')
 st.markdown('''
-                Se você quiser conversar sobre oportunidades, tirar dúvidas sobre meus projetos ou apenas 
-                bater um papo sobre dados e tecnologia, estou à disposição.
+                Se você quiser fazer sugestões, tirar dúvidas sobre meus projetos ou apenas 
+                conversar sobre dados e tecnologia, estou à disposição.
                 ''')
 st.markdown("""
     <div style="display: flex; gap: 30px; font-size: 18px; align-items: center;">
